@@ -1,0 +1,50 @@
+{
+  "name": "tasks-vue-4",
+  "version": "6.1.0",
+  "description": "Taskbook for Vue 3 Course on learn.javascript.ru",
+  "license": "UNLICENSED",
+  "author": "Grigorii K. Shartsev <me@shgk.me>",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview --port 5050",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "typecheck": "vue-tsc --noEmit",
+    "taskbook:dev": "cross-env TASKBOOK_DEV=1 vite",
+    "taskbook:dev:solution": "cross-env TASKBOOK_DEV=1 TASKBOOK_SOLUTION=1 vite",
+    "taskbook:test:solution": "cross-env TASKBOOK_DEV=1 TASKBOOK_SOLUTION=1 npm test",
+    "taskbook:coverage": "cross-env TASKBOOK_DEV=1 npm run coverage"
+  },
+  "dependencies": {
+    "@shgk/vue-course-ui": "^6.1.0",
+    "@vueuse/core": "^13.1.0",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@shgk/vue-course-taskbook": "^6.1.0",
+    "@vue/test-utils": "^2.4.6",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.24.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1",
+    "vue-tsc": "^2.2.8"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "private": true
+}
