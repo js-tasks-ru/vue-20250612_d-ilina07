@@ -1,0 +1,5 @@
+{
+  "extends": "@shgk/vue-course-taskbook/configs/tsconfig.json",
+  "include": ["**/*.ts", "**/*.js", "**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}
