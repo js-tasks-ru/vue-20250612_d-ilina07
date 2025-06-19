@@ -5,28 +5,28 @@ export default defineComponent({
   name: 'WeatherApp',
 
   setup() {
-    const weatherData = getWeatherData();
-    const icons = WeatherConditionIcons;
+    const weatherData = getWeatherData()
+    const icons = WeatherConditionIcons
 
     function formatKelvinToCelsius(kelvin) {
-      return (kelvin - 273.15).toFixed(1);
+      return (kelvin - 273.15).toFixed(1)
     }
 
     function formatPressure(hPa) {
-      return Math.round(hPa * 0.75);
+      return Math.round(hPa * 0.75)
     }
 
     function timeStringToMinutes(timeStr) {
-      const [hours, minutes] = timeStr.split(':').map(Number);
-      return hours * 60 + minutes;
+      const [hours, minutes] = timeStr.split(':').map(Number)
+      return hours * 60 + minutes
     }
 
     function isNight(currentTime, sunrise, sunset) {
-      const currentMinutes = timeStringToMinutes(currentTime);
-      const sunriseMinutes = timeStringToMinutes(sunrise);
-      const sunsetMinutes = timeStringToMinutes(sunset);
+      const currentMinutes = timeStringToMinutes(currentTime)
+      const sunriseMinutes = timeStringToMinutes(sunrise)
+      const sunsetMinutes = timeStringToMinutes(sunset)
 
-      return currentMinutes < sunriseMinutes || currentMinutes >= sunsetMinutes;
+      return currentMinutes < sunriseMinutes || currentMinutes >= sunsetMinutes
     }
 
     return {

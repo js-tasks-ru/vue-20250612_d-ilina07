@@ -4,9 +4,8 @@ const App = defineComponent({
   name: 'App',
 
   setup() {
-
-    const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long' });
-    const date = formatter.format(new Date());
+    const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long' })
+    const date = formatter.format(new Date())
 
     return {
       date,
@@ -15,10 +14,10 @@ const App = defineComponent({
 
   template: `
     <div>Сегодня {{ date }}</div>
-  `
+  `,
 })
 
-const app = createApp(App);
-const vm = app.mount('#app');
+const app = createApp(App)
+const vm = app.mount('#app')
 
-window.vm = vm;
+window.vm = vm
